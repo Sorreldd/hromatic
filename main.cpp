@@ -29,7 +29,7 @@ int X(int k) {
     use[x] = use[y] = 1;
     n++;
     for(int i = 0; i < n; i++)
-        a[n - 1][i] = a[i][n - 1] = (a[x][i] & a[y][i]);
+        a[n - 1][i] = a[i][n - 1] = (a[x][i] | a[y][i]);
     ans = min(ans, X(k - 1));
     for(int i = 0; i < n; i++)
         a[n - 1][i] = a[i][n - 1] = 0;
