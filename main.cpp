@@ -33,6 +33,7 @@ int X(int k) {
     ans = min(ans, X(k - 1));
     for(int i = 0; i < n; i++)
         a[n - 1][i] = a[i][n - 1] = 0;
+    use[x] = use[y] = 0;
     n--;
     return ans;
 
